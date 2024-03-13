@@ -1,0 +1,15 @@
+h1 {
+  background-image: url(https://www.australiangeographic.com.au/wp-content/uploads/2022/07/STScI-01G7PWWPY7XRR9PW95W9W8ZYZW-copy.jpg?quality=75);
+  background-color: rgb(63, 60, 60);
+  background-size: cover;
+  color: rgb(225, 218, 218);
+  margin: 0;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 2000px;
+  width: 100%;
+  font-size: 3.2em;
+}
+
