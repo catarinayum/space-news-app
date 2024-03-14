@@ -3,8 +3,10 @@ import { Banner } from "./components/Banner";
 
 import "./App.css";
 import { SearchBar } from "./components/SearchBar";
+import { Sorting } from "./components/Sorting";
 import { ArticleList } from "./components/ArticleList";
 import { Pagination } from "./components/Pagination";
+import { Footer } from "./components/Footer";
 
 function App() {
   const [URL, setURL] = useState(
@@ -16,7 +18,6 @@ function App() {
   const [query, setQuery] = useState("");
 
   const [loading, setLoading] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -45,9 +46,15 @@ function App() {
   return (
     <div>
       <Banner />
-      <SearchBar setURL={setURL} query={query} setQuery={setQuery} />
-      <ArticleList articles={articles} loading={loading} />
-      <Pagination data={data} URL={URL} setURL={setURL} />
+      <main><div className="navigation">        <SearchBar setURL={setURL} query={query} setQuery={setQuery} />
+        <Sorting setURL={setURL} /></div>
+
+        <ArticleList articles={articles} loading={loading} />
+        <Pagination data={data} URL={URL} setURL={setURL} />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

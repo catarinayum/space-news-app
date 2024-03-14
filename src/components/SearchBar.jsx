@@ -3,6 +3,7 @@ import "./SearchBar.css";
 //why didn't setURL
 export function SearchBar({ setURL, query, setQuery }) {
   const handleChange = (e) => {
+    //tried input validation before enter, won't allow deleting last character
     setQuery(e.target.value);
   };
   const handleSearch = (e) => {

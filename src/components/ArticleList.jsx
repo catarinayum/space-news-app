@@ -21,7 +21,10 @@ export function ArticleList({ articles, loading }) {
               </div>
               <h4>{article.title}</h4>
               <p>{article.summary}</p>
-              <p className="read-more">Read more...</p>
+              <div className="article-details">
+                <p>Published on: {article.published_at.slice(0, 10)}</p>
+                <p className="read-more">Read more...</p>
+              </div>
             </a>
           </li>
         ))

@@ -13,9 +13,9 @@
   padding: 10px 40px;
 }
 .img-container {
-  width: 400px; /* Adjust the width as needed */
-  height: 200px; /* Adjust the height as needed */
-  overflow: hidden; /* Hide overflowing content */
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
   margin: 0 auto;
   padding: 10px;
 }
@@ -45,7 +45,8 @@ h4 {
 li {
   list-style: none;
 }
-.read-more {
-  text-align: right;
+.article-details {
+  display: flex;
   font-style: italic;
+  justify-content: space-between;
 }

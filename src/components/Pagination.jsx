@@ -1,5 +1,4 @@
-// why can't I pass previous and next props directly?
-// because I don't want to go to api link, I want to USE api link
+
 export function Pagination({ URL, setURL, data }) {
 
   const handlePrev = () => {

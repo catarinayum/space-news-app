@@ -27,6 +27,20 @@ body {
 }
 .page-link {
   background-color: rgb(74, 67, 69);
-    color: rgb(225, 218, 218);
-    width: 100px;
+  color: rgb(225, 218, 218);
+  width: 100px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 10px;
+}
+.navigation > * {
+  margin: 10px;
+}
+
+footer {
+  padding-top: 20px;
 }
