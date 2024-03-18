@@ -1,4 +1,4 @@
-export function Sorting({ setURL }) {
+export default function Sorting({ setURL }) {
   ///https://api.spaceflightnewsapi.net/v4/articles/?ordering=published_at
   const handleNewest = () => {
     setURL("https://api.spaceflightnewsapi.net/v4/articles/");

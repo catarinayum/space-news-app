@@ -1,7 +1,7 @@
 import "./SearchBar.css";
 
 //why didn't setURL
-export function SearchBar({ setURL, query, setQuery }) {
+export default function SearchBar({ setURL, query, setQuery }) {
   const handleChange = (e) => {
     //tried input validation before enter, won't allow deleting last character
     setQuery(e.target.value);
@@ -9,7 +9,10 @@ export function SearchBar({ setURL, query, setQuery }) {
   const handleSearch = (e) => {
     e.preventDefault();
     setURL(`https://api.spaceflightnewsapi.net/v4/articles/?search=${query}`);
+    setQuery("");
   };
+
+  //Add no results found
 
   return (
     <>

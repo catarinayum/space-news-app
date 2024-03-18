@@ -1,10 +1,8 @@
 import "./ArticleList.css";
 
 // eslint-disable-next-line react/prop-types
-export function ArticleList({ articles, loading }) {
-  if (loading) {
-    return <h3>Loading...</h3>;
-  }
+export default function ArticleList({ articles }) {
+
   return (
     <ul className="articles-div">
       {

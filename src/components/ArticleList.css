@@ -5,7 +5,6 @@
   justify-content: space-around;
   margin: 0;
   padding: 0;
-  
 }
 .article {
   width: 500px;
@@ -49,4 +48,7 @@ li {
   display: flex;
   font-style: italic;
   justify-content: space-between;
+}
+.read-more {
+  font-weight: bold;
 }

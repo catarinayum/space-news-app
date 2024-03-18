@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
-import { Banner } from "./components/Banner";
+import Banner from "./components/Banner";
 
 import "./App.css";
-import { SearchBar } from "./components/SearchBar";
-import { Sorting } from "./components/Sorting";
-import { ArticleList } from "./components/ArticleList";
-import { Pagination } from "./components/Pagination";
-import { Footer } from "./components/Footer";
+import Loading from "./pages/Loading";
+import SearchBar from "./components/SearchBar";
+import Sorting from "./components/Sorting";
+import ArticleList from "./components/ArticleList";
+import Pagination from "./components/Pagination";
+import Footer from "./components/Footer";
 
 function App() {
   const [URL, setURL] = useState(
@@ -43,11 +44,19 @@ function App() {
     //if URL is changed, effect re-runs
   }, [URL]);
 
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
     <div>
-      <Banner />
-      <main><div className="navigation">        <SearchBar setURL={setURL} query={query} setQuery={setQuery} />
-        <Sorting setURL={setURL} /></div>
+      <Banner setURL={setURL} />
+      <main>
+        <div className="navigation">
+          {" "}
+          <SearchBar setURL={setURL} query={query} setQuery={setQuery} />
+          <Sorting setURL={setURL} />
+        </div>
 
         <ArticleList articles={articles} loading={loading} />
         <Pagination data={data} URL={URL} setURL={setURL} />

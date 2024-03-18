@@ -1,6 +1,4 @@
-
-export function Pagination({ URL, setURL, data }) {
-
+export default function Pagination({ URL, setURL, data }) {
   const handlePrev = () => {
     if (!data.previous) {
       setURL(URL);

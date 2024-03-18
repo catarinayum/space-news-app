@@ -8,6 +8,6 @@ The universe... what a concept.
 
 - Read news articles related to space
 - Search function
+- Sort articles by date function
 
 ## Setup
-
