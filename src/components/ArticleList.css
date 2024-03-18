@@ -40,7 +40,7 @@ a {
   background-color: rgba(82, 81, 89, 0.8);
 }
 #dark .article:hover {
-  background-color: rgba(163, 163, 163, 0.8);
+  background-color: rgba(249, 249, 249, 0.9);
 }
 .article:hover a {
   transition: all 0.4s ease;
