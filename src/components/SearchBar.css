@@ -1,5 +1,8 @@
-
 button {
-    border: none;
-    background: none;
+  border: none;
+  background: none;
+}
+
+#dark svg {
+  color: rgb(225, 218, 218);
 }

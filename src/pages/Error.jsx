@@ -5,8 +5,9 @@ export default function Loading() {
     <>
       {" "}
       <div className="message-container">
-        <div className="spinner-text">Loading...</div>
-        <div className="spinner"></div>
+        <div className="error-text">
+          Oops, something went wrong. Refresh page to try again.
+        </div>
       </div>
     </>
   );

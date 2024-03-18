@@ -1,19 +1,24 @@
 body {
-  background-color: rgb(220, 229, 237);
   width: 100%;
   min-width: 320px;
   min-height: 100vh;
-
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 }
 
 #root {
-  max-width: 1200px;
-
   margin: 0 auto;
   text-align: center;
+  height: 100vh;
+}
+
+#light {
+  background-color: rgb(220, 229, 237);
+}
+#dark {
+  background-color: rgb(74, 67, 69);
+  color: rgb(220, 229, 237);
 }
 
 .pagination {
@@ -26,9 +31,16 @@ body {
   cursor: pointer;
 }
 .page-link {
+  width: 100px;
+}
+#light .page-link {
   background-color: rgb(74, 67, 69);
   color: rgb(225, 218, 218);
-  width: 100px;
+}
+#dark .page-link {
+  background-color: rgb(225, 218, 218);
+  color: rgb(74, 67, 69);
+  border: solid rgb(56, 53, 54) 1px;
 }
 
 .navigation {
@@ -43,4 +55,5 @@ body {
 
 footer {
   padding-top: 20px;
+  padding-bottom: 10px;
 }
