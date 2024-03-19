@@ -6,6 +6,10 @@
   flex-direction: column;
 }
 
+.error-title {
+  font-size: 4em;
+}
+
 .spinner-text {
   height: 50px;
   width: 100px;

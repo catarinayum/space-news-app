@@ -1,19 +1,21 @@
 import { useState, useEffect, createContext } from "react";
-import Banner from "./components/Banner";
 
-import "./App.css";
-import Loading from "./pages/LoadingPage";
-import Error from "./pages/ErrorPage";
-import DarkMode from "./components/DarkModeSwitch";
-import SearchBar from "./components/SearchBar";
-import Sorting from "./components/Sorting";
-import ArticleList from "./components/ArticleList";
-import Pagination from "./components/Pagination";
-import Footer from "./components/Footer";
+import "./ArticlesPage.css";
+
+import Loading from "./LoadingPage";
+import ErrorPage from "./ErrorPage";
+
+import Banner from "../components/Banner";
+import DarkMode from "../components/DarkModeSwitch";
+import SearchBar from "../components/SearchBar";
+import Sorting from "../components/Sorting";
+import ArticleList from "../components/ArticleList";
+import Pagination from "../components/Pagination";
+import Footer from "../components/Footer";
 
 export const ThemeContext = createContext(null);
 
-function App() {
+function ArticlesPage() {
   const [URL, setURL] = useState(
     "https://api.spaceflightnewsapi.net/v4/articles/"
   );
@@ -57,7 +59,7 @@ function App() {
   }
 
   if (error) {
-    return <Error />;
+    return <ErrorPage />;
   }
 
   const toggleTheme = () => {
@@ -67,7 +69,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="App" id={theme}>
-        <Banner setURL={setURL} />
+        <Banner />
         <main>
           <div className="navigation">
             <DarkMode theme={theme} toggleTheme={toggleTheme} />
@@ -86,4 +88,4 @@ function App() {
   );
 }
 
-export default App;
+export default ArticlesPage;
