@@ -1,7 +1,7 @@
+import GeneralListPage from "./GeneralListPage.jsx";
+
 export default function BlogsPage() {
   return (
-    <>
-      <h2>Blog posts!!!</h2>
-    </>
+    <GeneralListPage endpoint="https://api.spaceflightnewsapi.net/v4/blogs/" />
   );
 }
