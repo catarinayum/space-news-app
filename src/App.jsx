@@ -2,8 +2,8 @@ import { useState, useEffect, createContext } from "react";
 import Banner from "./components/Banner";
 
 import "./App.css";
-import Loading from "./pages/Loading";
-import Error from "./pages/Error";
+import Loading from "./pages/LoadingPage";
+import Error from "./pages/ErrorPage";
 import DarkMode from "./components/DarkModeSwitch";
 import SearchBar from "./components/SearchBar";
 import Sorting from "./components/Sorting";
