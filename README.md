@@ -10,5 +10,6 @@ The universe... what a concept.
 - Search function
 - Sort articles by date function
 - Dark/light mode
+- Additional tabs with blog posts and reports
 
 ## Setup
