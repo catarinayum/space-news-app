@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage.jsx";
-import GeneralListPage from "./pages/GeneralListPage.jsx";
 import ArticlesPage from "./pages/ArticlesPage.jsx";
 import BlogsPage from "./pages/BlogsPage.jsx";
 import ReportsPage from "./pages/ReportsPage.jsx";

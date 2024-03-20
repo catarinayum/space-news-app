@@ -16,11 +16,10 @@ import Footer from "../components/Footer";
 
 export const ThemeContext = createContext(null);
 
-function GeneralListPage({ endpoint }) {
+function GeneralListPage({ endpoint, contentType }) {
   const [URL, setURL] = useState(endpoint);
   const [articles, setArticles] = useState([]);
   const [data, setData] = useState();
-
   const [page, setPage] = useState();
 
   const [query, setQuery] = useState("");
@@ -95,7 +94,7 @@ function GeneralListPage({ endpoint }) {
 
             <SearchBar setURL={setURL} query={query} setQuery={setQuery} />
           </div>
-          <Sorting setURL={setURL} />
+          <Sorting setURL={setURL} contentType={contentType} />
           <ArticleList articles={articles} loading={loading} />
           <Pagination data={data} URL={URL} setURL={setURL} />
         </main>

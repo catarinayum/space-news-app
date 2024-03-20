@@ -1,13 +1,15 @@
-export default function Sorting({ setURL }) {
+export default function Sorting({ setURL, contentType }) {
   ///https://api.spaceflightnewsapi.net/v4/articles/?ordering=published_at
   const handleNewest = () => {
-    setURL("https://api.spaceflightnewsapi.net/v4/articles/");
+    setURL(`https://api.spaceflightnewsapi.net/v4/${contentType}/`);
   };
+
   const handleOldest = () => {
     setURL(
-      "https://api.spaceflightnewsapi.net/v4/articles/?ordering=published_at"
+      `https://api.spaceflightnewsapi.net/v4/${contentType}/?ordering=published_at`
     );
   };
+
   return (
     <div className="dropdown">
       <button
