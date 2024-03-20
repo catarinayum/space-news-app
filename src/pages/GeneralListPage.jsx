@@ -10,7 +10,7 @@ import Banner from "../components/Banner";
 import DarkMode from "../components/DarkModeSwitch";
 import SearchBar from "../components/SearchBar";
 import Sorting from "../components/Sorting";
-import ArticleList from "../components/ArticleList";
+import ArticleList from "../components/ItemList";
 import Pagination from "../components/Pagination";
 import Footer from "../components/Footer";
 
@@ -97,9 +97,9 @@ function GeneralListPage({ endpoint }) {
           <ArticleList articles={articles} loading={loading} />
           <Pagination data={data} URL={URL} setURL={setURL} />
         </main>
-        <footer>
+        
           <Footer />
-        </footer>
+   
       </div>
     </ThemeContext.Provider>
   );

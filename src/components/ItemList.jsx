@@ -1,8 +1,7 @@
-import "./ArticleList.css";
+import "./ItemList.css";
 
 // eslint-disable-next-line react/prop-types
 export default function ArticleList({ articles }) {
-
   return (
     <ul className="articles-div">
       {
