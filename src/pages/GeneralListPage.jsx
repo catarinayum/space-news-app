@@ -70,36 +70,37 @@ function GeneralListPage({ endpoint }) {
       <div className="App" id={theme}>
         <Banner />
         <main>
-          <div className="navigation">
-            <NavLink
-              className={location.pathname === "/" ? "fw-bold" : ""}
-              to="/"
-            >
-              Articles
-            </NavLink>
-            <NavLink
-              className={location.pathname === "/blog-posts" ? "fw-bold" : ""}
-              to="/blog-posts"
-            >
-              Blog posts
-            </NavLink>{" "}
-            <NavLink
-              className={location.pathname === "/reports" ? "fw-bold" : ""}
-              to="/reports"
-            >
-              Reports
-            </NavLink>
-            <DarkMode theme={theme} toggleTheme={toggleTheme} />
-            <SearchBar setURL={setURL} query={query} setQuery={setQuery} />
-            <Sorting setURL={setURL} />
-          </div>
+          <DarkMode theme={theme} toggleTheme={toggleTheme} />
+          <div className="navbar">
+            <div className="navigation">
+              <NavLink
+                className={location.pathname === "/" ? "fw-bold" : ""}
+                to="/"
+              >
+                Articles
+              </NavLink>
+              <NavLink
+                className={location.pathname === "/blog-posts" ? "fw-bold" : ""}
+                to="/blog-posts"
+              >
+                Blog posts
+              </NavLink>{" "}
+              <NavLink
+                className={location.pathname === "/reports" ? "fw-bold" : ""}
+                to="/reports"
+              >
+                Reports
+              </NavLink>
+            </div>
 
+            <SearchBar setURL={setURL} query={query} setQuery={setQuery} />
+          </div>
+          <Sorting setURL={setURL} />
           <ArticleList articles={articles} loading={loading} />
           <Pagination data={data} URL={URL} setURL={setURL} />
         </main>
-        
-          <Footer />
-   
+
+        <Footer />
       </div>
     </ThemeContext.Provider>
   );

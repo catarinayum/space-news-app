@@ -4,7 +4,7 @@ import "./DarkModeSwitch.css";
 export default function DarkMode({ theme, toggleTheme }) {
   return (
     <div className="switch">
-      <label>{theme === "dark" ? "🌘 Dark mode" : "☀️ Light mode"}</label>
+      <label>🌘 Dark mode</label>
       <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
     </div>
   );
