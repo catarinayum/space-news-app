@@ -8,7 +8,11 @@ export default function ItemList({ articles, URL }) {
     return (
       <>
         {" "}
-        {URL.indexOf("=") > 1 ? <h6>Showing results for "{query}"</h6> : ""}
+        {query && URL.indexOf("=") > 1 && query != "published_at" ? (
+          <h6>Showing results for "{query}"</h6>
+        ) : (
+          ""
+        )}
         <ul className="articles-div">
           {
             // eslint-disable-next-line react/prop-types
