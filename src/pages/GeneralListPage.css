@@ -64,3 +64,6 @@ body {
   margin: 30px 10px 0px;
   padding: 0;
 }
+#dark .dropdown-item {
+  color: rgb(74, 67, 69);
+}
