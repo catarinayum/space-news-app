@@ -10,7 +10,7 @@ import Banner from "../components/Banner";
 import DarkMode from "../components/DarkModeSwitch";
 import SearchBar from "../components/SearchBar";
 import Sorting from "../components/Sorting";
-import ArticleList from "../components/ItemList";
+import ItemList from "../components/ItemList";
 import Pagination from "../components/Pagination";
 import Footer from "../components/Footer";
 
@@ -92,10 +92,15 @@ function GeneralListPage({ endpoint, contentType }) {
               </NavLink>
             </div>
 
-            <SearchBar setURL={setURL} query={query} setQuery={setQuery} />
+            <SearchBar
+              setURL={setURL}
+              contentType={contentType}
+              query={query}
+              setQuery={setQuery}
+            />
           </div>
           <Sorting setURL={setURL} contentType={contentType} />
-          <ArticleList articles={articles} loading={loading} />
+          <ItemList articles={articles} URL={URL} />
           <Pagination data={data} URL={URL} setURL={setURL} />
         </main>
 
